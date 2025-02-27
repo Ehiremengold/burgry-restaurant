@@ -1,11 +1,9 @@
-import Button from "./components/Button";
-import PrimaryLine from "./components/PrimaryLine";
+import Header from "./sections/Header";
 
 export default function Home() {
   return (
     <>
-      <Button text="Shop now" color="primary"/>
-      <PrimaryLine />
+      <Header />
     </>
   );
 }

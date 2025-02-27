@@ -5,14 +5,13 @@
 body {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  max-width: 1536px;
+  max-width: 1950px;
   width: 100%;
   margin-inline: auto;
-  background-color: black;
 }
 
-@layer utilities{
-  .container{
-    @apply max-w-5xl mx-auto
+@layer utilities {
+  .container {
+    @apply max-w-5xl mx-auto;
   }
 }
