@@ -18,8 +18,8 @@ const Header = () => {
     }
   }, [menu]);
   return (
-    <section className="h-screen bg-secondary pt-5">
-      <nav className="px-8 container flex items-center justify-between">
+    <section className="bg-secondary pt-5">
+      <nav className="lg:px-10 px-8 container flex items-center justify-between">
         <Image src={logo} className="w-28" alt="logo" />
 
         <ul className="list-none text-white font-dmSans md:flex hidden gap-12">
@@ -56,6 +56,10 @@ const Header = () => {
           <li>Reservation</li>
           <li>Contact us</li>
         </ul>
+
+        <span className="md:hidden flex justify-center">
+          <Button text="shop online" color="note-primary" />
+        </span>
       </nav>
       <Hero />
     </section>

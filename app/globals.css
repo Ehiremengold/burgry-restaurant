@@ -12,6 +12,9 @@ body {
 
 @layer utilities {
   .container {
-    @apply max-w-5xl mx-auto;
+    @apply max-w-6xl mx-auto;
+  }
+  .section {
+    @apply pt-10 pb-10 lg:pb-24 lg:pt-24 bg-secondary;
   }
 }

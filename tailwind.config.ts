@@ -13,6 +13,7 @@ export default {
         primary: "#ffba00",
         secondary: "#000000",
         tertiary: "#171717",
+        subtle: "#C0C0C0",
       },
       fontFamily: {
         oswald: ["var(--font-oswald)", "sans-serif"],

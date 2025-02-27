@@ -1,98 +1,52 @@
 import Image from "next/image";
 import heroImage1 from "@/public/assets/hero-images/hero-burger.svg";
-
+import PrimaryLine from "./PrimaryLine";
+import heroIcon1 from "@/public/assets/hero-icons/hero-icon-1.svg";
+import heroIcon2 from "@/public/assets/hero-icons/hero-icon-2.svg";
+import heroIcon3 from "@/public/assets/hero-icons/hero-icon-3.svg";
+import Button from "./Button";
 const Hero = () => {
   return (
-    <section className="mt-8">
-      {/* <!-- Slider --> */}
-      <div
-        data-hs-carousel='{
-    "loadingclassNamees": "opacity-0",
-    "dotsItemclassNamees": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
-    "isAutoPlay": true
-  }'
-        className="relative container"
-      >
-        <div className="hs-carousel relative overflow-hidden w-full min-h-96 bg-white">
-          <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
-            {/* slide 1 */}
-            <div className="hs-carousel-slide bg-black">
-              <div className="flex md:flex-row flex-row md:item-stretch md:justify-between justify-center md:text-left text-center gap-12">
-                <Image src={heroImage1} alt="hero-image-1"/>
-              </div>
-            </div>
-            {/* end of slide 1 */}
-
-            {/* slide 2 */}
-            <div className="hs-carousel-slide">
-              <div className="flex justify-center h-full bg-gray-200 p-6 dark:bg-neutral-800">
-                <span className="self-center text-4xl text-gray-800 transition duration-700 dark:text-white">
-                  Second slide
-                </span>
-              </div>
-            </div>
-            {/* end of slide 2 */}
-
-            {/* slide 3 */}
-            <div className="hs-carousel-slide">
-              <div className="flex justify-center h-full bg-gray-300 p-6 dark:bg-neutral-700">
-                <span className="self-center text-4xl text-gray-800 transition duration-700 dark:text-white">
-                  Third slide
-                </span>
-              </div>
-            </div>
-            {/* end of slide 3 */}
-          </div>
+    <section className="section">
+      <div className="px-10 container flex lg:flex-row flex-col lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center gap-12">
+        <div className="w-full lg:justify-start justify-center flex">
+          <Image src={heroImage1} alt="hero-image-1" />
         </div>
 
-        {/* <button
-          type="button"
-          className="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
-        >
-          <span className="text-2xl" aria-hidden="true">
-            <svg
-              className="shrink-0 size-5"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m15 18-6-6 6-6"></path>
-            </svg>
-          </span>
-          <span className="sr-only">Previous</span>
-        </button>
-        <button
-          type="button"
-          className="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
-        >
-          <span className="sr-only">Next</span>
-          <span className="text-2xl" aria-hidden="true">
-            <svg
-              className="shrink-0 size-5"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m9 18 6-6-6-6"></path>
-            </svg>
-          </span>
-        </button> */}
+        <div className="flex flex-col gap-7 text-white lg:justify-start justify-center lg:items-start items-center">
+          <h1 className="font-oswald text-4xl md:text-5xl lg:text-7xl lg:text-left text-center font-bold">
+            Enjoy <span className="text-primary">Burgry</span> – Make Your Tummy
+            Happy
+          </h1>
+          <div className="flex justify-center lg:justify-start">
+            <PrimaryLine />
+          </div>
 
-        <div className="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2"></div>
+          <p className="lg:text-left text-center text-subtle">
+            Indulge in the juiciest burgers crafted to perfection. Our fresh
+            ingredients and bold flavors come together to create a mouthwatering
+            experience that’ll leave you craving for more. Bite into happiness
+            today!
+          </p>
+
+          <div className="lg:w-1/2 w-2/3 gap-8 flex lg:items-start lg:justify-start items-center justify-between">
+            <div className="flex flex-col gap-4">
+              <Image src={heroIcon1} alt="hero-icon" />
+              <p>Delicious</p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <Image src={heroIcon2} alt="hero-icon" />
+              <p>Fresh</p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <Image src={heroIcon3} alt="hero-icon" />
+              <p>Organic</p>
+            </div>
+          </div>
+
+          <Button color="primary" text="Check Menu" />
+        </div>
       </div>
-      {/* <!-- End Slider --> */}
     </section>
   );
 };
