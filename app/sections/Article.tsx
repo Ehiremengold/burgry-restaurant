@@ -38,7 +38,7 @@ const Article = () => {
                   <p className="text-subtle text-base font-dmSans">
                     {beginning}
                   </p>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 cursor-pointer">
                     <p className="text-primary text-base">Read More</p>
                     <span className="text-primary">&rarr;</span>
                   </div>

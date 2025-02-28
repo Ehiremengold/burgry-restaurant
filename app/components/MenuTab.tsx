@@ -17,12 +17,12 @@ const MenuTab = () => {
 
   return (
     <>
-      <div className="flex gap-6 items-center justify-center mt-6 overflow-scroll">
+      <div className="flex gap-6 items-center justify-center mt-6">
         {["Food", "Snack", "Beverage"].map((label, index) => (
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`rounded-lg font-dmSans sm:px-6 px-3 py-2 transition-all ease-in-out duration-500 ${
+            className={`rounded-lg font-dmSans sm:px-6 cursor-pointer px-3 py-2 transition-all ease-in-out duration-500 ${
               activeTab === index
                 ? "bg-primary text-black"
                 : "bg-tertiary text-white"
@@ -79,13 +79,13 @@ const MenuTab = () => {
                 const { img, name, price, desc } = item;
                 return (
                   <div key={index} className="flex flex-col gap-3 h-full">
-                    <div className="bg-tertiary rounded-2xl grid place-items-center p-6 h-full">
-                      <Image src={img} alt={name} loading="eager" />
+                    <div className="bg-tertiary rounded-2xl grid place-items-center h-[250px] p-6">
+                      <Image src={img} height={120} width={150} alt={name} loading="eager" className="object-contain" />
                     </div>
                     <h1 className="font-oswald text-xl text-white font-bold">
                       {name}
                     </h1>
-                    <p className="text-subtle text-sm font-dmSans">{desc}</p>
+                    <p className="text-subtle text-sm font-dmSans line-clamp-2">{desc}</p>
                     <p className="font-bold text-primary font-oswald text-lg">
                       ${price}
                     </p>
@@ -112,12 +112,14 @@ const MenuTab = () => {
                     key={index}
                     className="flex flex-col gap-3 h-full justify-stretch"
                   >
-                    <div className="bg-tertiary rounded-2xl grid place-items-center h-[200px] p-3 w-full">
+                    <div className="bg-tertiary rounded-2xl grid place-items-center h-[280px] p-3 w-full">
                       <Image
+                      height={120}
+                      width={120}
                         src={img}
                         alt={name}
                         loading="eager"
-                        className="object-cover w-1/3 md:w-1/2 lg:w-7/12"
+                        className="object-cover"
                       />
                     </div>
                     <h1 className="font-oswald text-xl text-white font-bold">

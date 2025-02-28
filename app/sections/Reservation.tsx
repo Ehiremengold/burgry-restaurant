@@ -1,7 +1,6 @@
 import bgImage from "@/public/assets/special-occassion-image.jpg";
 import Image from "next/image";
 import PrimaryLine from "../components/PrimaryLine";
-import Button from "../components/Button";
 
 const Reservation = () => {
   return (
@@ -18,7 +17,7 @@ const Reservation = () => {
               Get a special offer for your special occasion
             </h1>
             <PrimaryLine />
-            <p className="text-subtle font-dmSans lg:text-2xl text-lg lg:text-left text-center">
+            <p className="text-white font-dmSans lg:text-2xl text-lg lg:text-left text-center">
               Celebrate in style with us! Reserve your spot today and make your
               special moments even more memorable with exclusive deals and
               delicious food.

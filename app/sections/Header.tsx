@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 import logo from "@/public/assets/logo.png";
-import Button from "../components/Button";
+import Button from "@/app/components/Button";
 import menuIcon from "@/public/assets/menu.png";
 import closeMenuIcon from "@/public/assets/close-menu.png";
 import { useEffect, useState } from "react";
-import Hero from "../components/Hero";
+import Hero from "@/app/components/Hero";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -18,7 +18,7 @@ const Header = () => {
     }
   }, [menu]);
   return (
-    <section className="bg-secondary h-screen grid place-items-center">
+    <section className="bg-secondary h-auto pt-5 grid place-items-center">
       <nav className="lg:px-10 px-8 container flex items-center justify-between">
         <Image src={logo} className="w-28" alt="logo" />
 

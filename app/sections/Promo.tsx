@@ -18,7 +18,7 @@ const Promo = () => {
               Treat yourself without breaking the bank! Celebrate payday with a
               tasty burger and enjoy a sweet 10% off. Because you deserve it!
             </p>
-            <p className="font-dmSans text-primary font-light">Buy Online</p>
+            <p className="font-dmSans text-primary font-light cursor-pointer">Buy Online</p>
           </div>
 
           <Image src={promoImage1} alt="promo-image" />
@@ -35,7 +35,7 @@ const Promo = () => {
               Double the refreshment, double the fun! Quench your thirst and
               share the joy with our exclusive buy-one-get-one-free Coke offer!
             </p>
-            <p className="font-dmSans text-primary font-light">Buy Online</p>
+            <p className="font-dmSans text-primary font-light cursor-pointer">Buy Online</p>
           </div>
           <Image src={promoImage2} alt="promo-image" />
         </div>

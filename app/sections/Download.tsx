@@ -9,7 +9,7 @@ import playStore from "@/public/assets/googlestore.svg";
 const Download = () => {
   return (
     <section className="section">
-      <div className="px-6 container flex lg:flex-row flex-col-reverse lg:items-stretch items-center lg:justify-between justify-center gap-20">
+      <div className="px-6 container flex lg:flex-row flex-col-reverse lg:items-top items-center lg:justify-between justify-center gap-20">
         <Image src={MockUp} alt="app mockup" />
         <div className="flex flex-col lg:justify-start justify-center lg:items-start items-center max-sm:items-start gap-4">
           <h1 className="text-white font-oswald font-bold text-2xl lg:text-4xl">
