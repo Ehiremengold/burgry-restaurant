@@ -4,7 +4,6 @@ import Download from "./sections/Download";
 import Footer from "./sections/Footer";
 import Header from "./sections/Header";
 import Menu from "./sections/Menu";
-import Offerings from "./sections/Offerings";
 import Promo from "./sections/Promo";
 import Reservation from "./sections/Reservation";
 import Review from "./sections/Review";
@@ -15,7 +14,6 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* <Offerings /> */}
       <Promo />
       <AboutUs />
       <Menu />
