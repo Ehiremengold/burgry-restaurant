@@ -88,10 +88,16 @@ const Hero = () => {
             {heroContent[currentSlide].title}
           </motion.h1>
 
-          <div className="flex justify-center lg:justify-start">
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            style={{ transformOrigin: "left" }}
+            className="flex justify-center lg:justify-start"
+          >
             <PrimaryLine />
-          </div>
-
+          </motion.div>
           <motion.p
             key={heroContent[currentSlide].description}
             initial={{ opacity: 0, y: 10 }}
