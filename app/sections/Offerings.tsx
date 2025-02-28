@@ -18,15 +18,6 @@ const Offerings = () => {
     },
   };
 
-  const imageVariants = {
-    hover: {
-      y: -10,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-      },
-    },
-  };
 
   return (
     <section className="section">
