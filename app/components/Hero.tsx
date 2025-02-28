@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import heroImage1 from "@/public/assets/hero-images/hero-burger.svg";
 import heroImage2 from "@/public/assets/hero-images/hero-2.png";
@@ -41,10 +41,16 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="section overflow-hidden !pt-10">
       <div className="px-5 container flex lg:flex-row flex-col lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center gap-12">
-        
         {/* Image Container */}
         <div className="w-full lg:justify-start justify-center flex">
           <div className="w-full max-w-[600px] h-[500px] lg:h-[600px] relative">
@@ -111,8 +117,12 @@ const Hero = () => {
               <p>Organic</p>
             </div>
           </div>
-
-          <Button color="primary" text="Check Menu" />
+          <div
+            className="m-0 p-0"
+            onClick={() => scrollToSection("menu-section")}
+          >
+            <Button color="primary" text="Check Menu" />
+          </div>
         </div>
       </div>
     </section>
