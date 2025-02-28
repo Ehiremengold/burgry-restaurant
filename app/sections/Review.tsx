@@ -1,30 +1,102 @@
+"use client"
 import PrimaryLine from "../components/PrimaryLine";
 import { reviews } from "../lib/utils";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 const Review = () => {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      scale: 1.03,
+      boxShadow: "0px 15px 30px rgba(0,0,0,0.3)",
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section className="section !bg-tertiary">
       <div className="container px-6">
-        <div className="flex flex-col gap-4 justify-center items-center">
-          <h1 className="font-bold font-oswald text-white lg:text-4xl text-xl uppercase">
+        <motion.div
+          className="flex flex-col gap-4 justify-center items-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
+          <motion.h1
+            className="font-bold font-oswald text-white lg:text-4xl text-xl uppercase"
+            variants={childVariants}
+          >
             What Our customers are saying
-          </h1>
-          <PrimaryLine />
-          <p className="font-dmSans text-subtle lg:text-xl  text-base text-center lg:w-3/5">
+          </motion.h1>
+          <motion.div variants={childVariants}>
+            <PrimaryLine />
+          </motion.div>
+          <motion.p
+            className="font-dmSans text-subtle lg:text-xl text-base text-center lg:w-3/5"
+            variants={childVariants}
+          >
             Real feedback from real food lovers. See why our customers keep
             coming back for more!
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-5 mt-10">
+        <motion.div
+          className="grid lg:grid-cols-3 gap-5 mt-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
           {reviews.map((review, index) => {
             const { img, name, comment, occupation } = review;
             return (
-              <div
+              <motion.div
                 key={index}
-                className="drop-shadow-xl rounded-xl p-5 bg-secondary flex flex-col gap-4 items-stretch"
+                className="drop-shadow-xl rounded-xl p-5 bg-secondary flex flex-col gap-4 items-stretch transition-all duration-300 ease-in-out"
+                variants={cardVariants}
+                whileHover="hover"
               >
-                <p className="font-dmSans text-lg text-white h-full">{comment}</p>
+                <p className="font-dmSans text-lg text-white h-full">
+                  {comment}
+                </p>
                 <div className="flex gap-4 items-center ">
                   <Image
                     src={img}
@@ -40,10 +112,10 @@ const Review = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
