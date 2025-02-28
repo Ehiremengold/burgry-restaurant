@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion} from "framer-motion";
 import Image from "next/image";
 import heroImage1 from "@/public/assets/hero-images/hero-burger.svg";
 import heroImage2 from "@/public/assets/hero-images/hero-2.png";

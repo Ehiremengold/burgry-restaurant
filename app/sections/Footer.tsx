@@ -68,10 +68,10 @@ const Footer = () => {
           <h2 className="font-oswald font-bold text-white text-base uppercase">
             follow us
           </h2>
-          <div className="flex items-center gap-3">
-            <Image src={facebookIcon} alt="facebook-icon" />
-            <Image src={twitterIcon} alt="twitter-icon" />
-            <Image src={instagramIcon} alt="instagram-icon" />
+          <div className="flex items-center gap-5">
+            <Image src={facebookIcon} alt="facebook-icon" className="cursor-pointer"/>
+            <Image src={twitterIcon} alt="twitter-icon" className="cursor-pointer" />
+            <Image src={instagramIcon} alt="instagram-icon" className="cursor-pointer"/>
           </div>
         </div>
       </div>
