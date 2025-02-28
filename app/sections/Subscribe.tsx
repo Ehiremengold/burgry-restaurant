@@ -15,7 +15,7 @@ const Subscribe = () => {
           <input
             type="text"
             placeholder="Email Address"
-            className="px-6 py-4 rounded-lg w-3/5"
+            className="px-6 py-4 rounded-lg md:w-3/5 w-full"
           />
           <button className="px-4 py-4 rounded-lg uppercase bg-secondary font-oswald text-white font-bold border-none">Subscribe now</button>
         </div>

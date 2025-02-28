@@ -5,7 +5,7 @@ import offeringImg3 from "../../public/assets/offerings/offering-image-3.png";
 
 const Offerings = () => {
   return (
-    <section className="section">
+    <section className="section !pt-0">
       <div className="container grid md:grid-cols-3 gap-6 px-6">
         <div className="relative bg-primary rounded-lg px-3 lg:pt-4 pt-3 pb-2 flex flex-col">
           <Image

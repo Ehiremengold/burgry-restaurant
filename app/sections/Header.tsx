@@ -6,6 +6,7 @@ import menuIcon from "@/public/assets/menu.png";
 import closeMenuIcon from "@/public/assets/close-menu.png";
 import { useEffect, useState } from "react";
 import Hero from "@/app/components/Hero";
+import Offerings from "./Offerings";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -62,6 +63,7 @@ const Header = () => {
         </span>
       </nav>
       <Hero />
+      <Offerings />
     </section>
   );
 };
