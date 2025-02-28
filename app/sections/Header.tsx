@@ -18,7 +18,7 @@ const Header = () => {
     }
   }, [menu]);
   return (
-    <section className="bg-secondary pt-5">
+    <section className="bg-secondary h-screen grid place-items-center">
       <nav className="lg:px-10 px-8 container flex items-center justify-between">
         <Image src={logo} className="w-28" alt="logo" />
 
@@ -30,7 +30,7 @@ const Header = () => {
         </ul>
 
         <span className="md:block hidden">
-          <Button text="shop online" color="primary" />
+          <Button text="pick up" color="primary" />
         </span>
         <button className="md:hidden block" onClick={() => setMenu(!menu)}>
           {menu ? (
@@ -58,7 +58,7 @@ const Header = () => {
         </ul>
 
         <span className="md:hidden flex justify-center">
-          <Button text="shop online" color="note-primary" />
+          <Button text="pick up" color="note-primary" />
         </span>
       </nav>
       <Hero />

@@ -11,7 +11,7 @@ const Promo = () => {
             <p className="font-dmSans text-primary font-light text-sm">
               Payday promo
             </p>
-            <h1 className="font-oswald font-bold text-white lg:text-3xl text-xl">
+            <h1 className="font-oswald font-bold text-white lg:text-xl text-lg">
               Get a 10% Discount on Payday Week
             </h1>
             <p className="text-subtle font-dmSans font-light text-sm lg:text-base">
@@ -28,7 +28,7 @@ const Promo = () => {
             <p className="font-dmSans text-primary font-light text-sm">
               Payday promo
             </p>
-            <h1 className="font-oswald font-bold text-xl lg:text-3xl text-white">
+            <h1 className="font-oswald font-bold text-lg lg:text-xl text-white">
               Buy 1 Coke, Get 1 More Free
             </h1>
             <p className="text-subtle font-dmSans font-light text-sm lg:text-base">

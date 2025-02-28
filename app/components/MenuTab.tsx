@@ -108,20 +108,23 @@ const MenuTab = () => {
               {beverages.map((item, index) => {
                 const { img, name, price, desc } = item;
                 return (
-                  <div key={index} className="flex flex-col gap-3 h-full justify-stretch">
+                  <div
+                    key={index}
+                    className="flex flex-col gap-3 h-full justify-stretch"
+                  >
                     <div className="bg-tertiary rounded-2xl grid place-items-center h-[200px] p-3 w-full">
                       <Image
                         src={img}
                         alt={name}
-                      
                         loading="eager"
-                        className="object-cover w-8/12"
+                        className="object-cover w-1/3 md:w-1/2 lg:w-7/12"
                       />
                     </div>
                     <h1 className="font-oswald text-xl text-white font-bold">
                       {name}
                     </h1>
                     <p className="text-subtle text-sm font-dmSans">{desc}</p>
+
                     <p className="font-bold text-primary font-oswald text-lg">
                       ${price}
                     </p>

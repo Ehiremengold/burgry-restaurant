@@ -9,14 +9,26 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`${makeBold && "font-semibold"} w-fit rounded-lg px-6 py-2 md:text-base uppercase  font-oswald ${
-        color === "primary"
-          ? "text-secondary  bg-primary"
-          : "bg-secondary text-white"
-      }`}
+      className={`relative overflow-hidden border-2 border-transparent ${
+        makeBold && "font-semibold"
+      } transition-all duration-300 ease-in-out w-fit rounded-lg px-6 py-2 md:text-base uppercase font-oswald
+        ${
+          color === "primary"
+            ? "text-secondary bg-primary"
+            : "bg-secondary text-white"
+        }
+        ${color === "primary" ? "group hover:text-white hover:border-white" : "border-transparent"}
+      `}
     >
-      {text}
+      <span className="relative z-10">{text}</span>
+      <span
+        className={`absolute inset-0 bg-black transition-transform duration-300 ease-in-out 
+          translate-y-[-100%] w-full h-full 
+          group-hover:translate-y-0
+        `}
+      />
     </button>
   );
 };
+
 export default Button;

@@ -8,12 +8,12 @@ import Button from "./Button";
 const Hero = () => {
   return (
     <section className="section">
-      <div className="px-10 container flex lg:flex-row flex-col lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center gap-12">
+      <div className="px-5 container flex lg:flex-row flex-col lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center gap-12">
         <div className="w-full lg:justify-start justify-center flex">
           <Image src={heroImage1} alt="hero-image-1" />
         </div>
 
-        <div className="flex flex-col gap-7 text-white lg:justify-start justify-center lg:items-start items-center">
+        <div className="flex flex-col gap-6 text-white lg:justify-start justify-center lg:items-start items-center">
           <h1 className="font-oswald text-4xl md:text-5xl lg:text-7xl lg:text-left text-center font-bold">
             Enjoy <span className="text-primary">Burgry</span> – Make Your Tummy
             Happy
@@ -22,7 +22,7 @@ const Hero = () => {
             <PrimaryLine />
           </div>
 
-          <p className="lg:text-left text-center text-subtle">
+          <p className="lg:text-left text-center text-subtle lg:text-xl  text-base">
             Indulge in the juiciest burgers crafted to perfection. Our fresh
             ingredients and bold flavors come together to create a mouthwatering
             experience that’ll leave you craving for more. Bite into happiness

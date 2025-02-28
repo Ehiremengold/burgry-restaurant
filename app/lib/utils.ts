@@ -22,11 +22,30 @@ import {
   beverageImage6,
 } from "@/public/assets/menu-images/export";
 
+import {
+  reviewImage1,
+  reviewImage2,
+  reviewImage3,
+} from "@/public/assets/review/export";
+
+import {
+  articleImage1,
+  articleImage2,
+  articleImage3,
+} from "@/public/assets/article/export";
+
 type MenuItem = {
   name: string;
   price: number;
   desc: string;
   img: StaticImageData;
+};
+
+type Review = {
+  img: StaticImageData;
+  name: string;
+  comment: string;
+  occupation: string;
 };
 
 export const menuItems: {
@@ -161,3 +180,51 @@ export const menuItems: {
     },
   ],
 };
+
+export const reviews: Review[] = [
+  {
+    img: reviewImage1,
+    comment:
+      "Absolutely loved the crispy chicken burger! The flavors were spot on, and the delivery was super fast. Highly recommend!",
+    name: "Samantha Lee",
+    occupation: "Food Vlogger",
+  },
+  {
+    img: reviewImage2,
+    comment:
+      "The Double Mac Burger is a must-try! Juicy patties with melted cheese – hands down the best I’ve had in town.",
+    name: "David Chen",
+    occupation: "YouTube Creator",
+  },
+  {
+    img: reviewImage3,
+    comment:
+      "Great food, great service! Ordering through the app was easy, and the free delivery was a nice bonus. I’ll definitely be back!",
+    name: "Mia Thompson",
+    occupation: "Lifestyle Blogger",
+  },
+];
+
+export const articles = [
+  {
+    title: "Look How We Make Beef Meat Tasty with This Technique",
+    category: "Food",
+    img: articleImage1,
+    beginning:
+      "Ever wondered why our beef burgers are so flavorful and juicy? Discover the secret technique behind our perfectly seasoned patties and learn how we bring out the best in every bite.",
+  },
+  {
+    title: "Get a 20% Discount at Our Birthday Event for $20 and Above Spend",
+    category: "News",
+    img: articleImage2,
+    beginning:
+      "We’re celebrating another year of serving deliciousness! Join us at our birthday event and enjoy a 20% discount when you spend $20 or more. Don’t miss out on this special offer!",
+  },
+  {
+    title: "Strawberry Smoothie is The Best Beverage for Your Hot Day",
+    category: "Beverage",
+    img: articleImage3,
+    beginning:
+      "Cool off with our refreshing strawberry smoothie! Made with fresh strawberries and a hint of sweetness, it’s the perfect drink to beat the heat and satisfy your cravings.",
+  },
+];

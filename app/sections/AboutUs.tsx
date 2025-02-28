@@ -10,7 +10,7 @@ const AboutUs = () => {
       <div className="container flex lg:flex-row flex-col gap-10 px-6 lg:justify-between justify-center lg:items-start items-center">
         <Image src={aboutImage} alt="about-image" />
 
-        <div className="flex flex-col gap-7 lg:items-start items-center">
+        <div className="flex flex-col gap-4 lg:items-start items-center">
           <h1
             className="text-white font-oswald font-bold text-3xl lg:text-left text-center
           "
