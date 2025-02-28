@@ -20,7 +20,9 @@ const Header = () => {
   }, [menu]);
   return (
     <section className="bg-secondary h-auto pt-5 grid place-items-center">
-      <nav className="lg:px-10 px-8 container flex items-center justify-between">
+      <nav className="lg:px-10 px-8 py-4 bg-secondary fixed z-50 left-0 right-0 top-0 ">
+        <div className="container flex items-center justify-between">
+
         <Image src={logo} className="w-28" alt="logo" />
 
         <ul className="list-none text-white font-dmSans md:flex hidden gap-12">
@@ -44,6 +46,7 @@ const Header = () => {
             <Image src={menuIcon} className="size-10" alt="menu-icon" />
           )}
         </button>
+          </div>
       </nav>
 
       <nav

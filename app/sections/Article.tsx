@@ -43,7 +43,7 @@ const Article = () => {
                 viewport={{ once: true }}
                 className="flex h-full flex-col gap-4 transition-transform duration-300 hover:scale-[1.03]"
               >
-                <div className="h-fit relative overflow-hidden rounded-lg">
+                <div className="h-fit relative overflow-hidden rounded-t-lg rounded-br-lg">
                   <Image
                     src={img}
                     className="object-cover w-full h-full"

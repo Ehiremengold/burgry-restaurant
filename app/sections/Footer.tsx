@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import logo from "@/public/assets/logo.png";
@@ -72,7 +72,10 @@ const Footer = () => {
           </h2>
           <div className="flex items-center gap-3">
             <Image src={emailIcon} alt="email-icon" />
-            <a href="mailto:ehiremengold@gmail.com" className="text-sm text-white">
+            <a
+              href="mailto:ehiremengold@gmail.com"
+              className="text-sm text-white"
+            >
               contact@thedeveloper.com
             </a>
           </div>
@@ -115,10 +118,10 @@ const Footer = () => {
       {/* Divider Line Animation */}
       <motion.hr
         initial={{ opacity: 0, scaleX: 0 }}
-        whileInView={{ opacity: 1, scaleX: 1 }}
+        whileInView={{ opacity: 0.15, scaleX: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="container mt-10 opacity-25"
+        className="container mt-10 opacity-20"
         style={{ transformOrigin: "left" }}
       />
 
