@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import MenuTab from "../components/MenuTab";
 import PrimaryLine from "../components/PrimaryLine";
 import { motion } from "framer-motion";
@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Menu = () => {
   return (
     <section className="section">
-      <div className="container px-6">
+      <div className="container px-6" id="menu-section">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
