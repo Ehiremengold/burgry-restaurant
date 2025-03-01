@@ -48,6 +48,23 @@ const Hero = () => {
     }
   };
 
+  const iconVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: index * 0.2,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
+  const buttonVariants = {
+    tap: { scale: 0.9 },
+  };
+
   return (
     <section className="section overflow-hidden !pt-20">
       <div className="px-5 container flex lg:flex-row flex-col lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center gap-6">
@@ -109,26 +126,33 @@ const Hero = () => {
             {heroContent[currentSlide].description}
           </motion.p>
 
-          <div className="lg:w-1/2 w-2/3 gap-8 flex lg:items-start lg:justify-start items-center justify-between">
-            <div className="flex flex-col gap-4">
-              <Image src={heroIcon1} alt="hero-icon" />
-              <p>Delicious</p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <Image src={heroIcon2} alt="hero-icon" />
-              <p>Fresh</p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <Image src={heroIcon3} alt="hero-icon" />
-              <p>Organic</p>
-            </div>
-          </div>
-          <div
+          <motion.div
+            className="lg:w-1/2 w-2/3 gap-8 flex lg:items-start lg:justify-start items-center justify-between"
+            initial="hidden"
+            animate="visible"
+          >
+            {[heroIcon1, heroIcon2, heroIcon3].map((icon, index) => (
+              <motion.div
+                key={index}
+                className="flex flex-col gap-4"
+                variants={iconVariants}
+                custom={index}
+              >
+                <Image src={icon} alt="hero-icon" />
+                <p className="text-white text-lg font-oswald">
+                  {["Delicious", "Fresh", "Organic"][index]}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
             className="m-0 p-0"
             onClick={() => scrollToSection("menu-section")}
+            whileTap="tap"
+            variants={buttonVariants}
           >
             <Button color="primary" text="Check Menu" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
