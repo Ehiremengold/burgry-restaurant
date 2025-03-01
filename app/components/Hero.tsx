@@ -67,7 +67,7 @@ const Hero = () => {
 
   return (
     <section className="section overflow-hidden !pt-20">
-      <div className="px-5 container flex lg:flex-row flex-col lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center gap-6">
+      <div className="px-6 container flex lg:flex-row flex-col lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center gap-6">
         {/* Image Container */}
         <div className="w-full lg:justify-start justify-center flex">
           <div className="w-full max-w-[600px] h-[500px] lg:h-[600px] relative">
